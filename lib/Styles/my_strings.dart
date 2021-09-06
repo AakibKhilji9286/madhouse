@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+
+
+var mobile = "Mobile/Email";
+var password = "Password";
+var forgot_password = "Forgot password?";
+var login = "LOGIN";
+var next = "Next";
+var LOGIN = "Log in";
+var signup = "Sign up";
+var continue_with_snapchat = "Continue with Snapchat";
+var Your_mobile_number = "Your mobile number?";
+var Chooseyourcountrycode = "Choose your country code.";
+var OF_SONGS_ON_MAD_HOUSE = "OF SONGS ON MAD HOUSE";
+var MILLIONS = "MILLIONS";
+var Enter_OTP = "Enter OTP";
+var Edit_phone_number = "Edit phone number";
+var We_have = "We have send 4 digit code on your mobile number";
+var Create_password = "Create a password";
+var use_atlist = "Use atlist 8 characters";
+var this_appera = "This appears on Madhouse profile.";
+var whats_your_name = "Whats your name?";
+var Other = "Other";
+var Male = "Male";
+var Female = "Female";
+var whats_your_gender = "Whats your gender";
+var connect_facebook = "Connect Facebook";
+var Connect = "Connect";
+var SKIP = "SKIP";
+var Camera_Mic = "Camera and Mic";
+var Notifications = "Notifications";
+var so_you = "So you can see you friedn and \nthey can hear you.";
+var so_you_every_time = "So you can stay updated every time.";
+var find_out = "Find out your facebook friends on Mad \nHouse and Follow them.";
+var Party_Music = "Party Music";
+var Connect_Spotify = "Connect Spotify";
+var Connect_Apple_Music = "Connect Apple Music";
+var Connect_With_Spotify = "Connect with your spotify account to save \nsongs in your spotify playlist.";
+var Connect_With_Apple = "Connect with your music account to save \nsongs in your music playlist.";
+var Conversations  = "Conversations";
+var Premium  = "Premium mixes from DJ Rush";
+var View_All_18  = "View all 18 premium mixes";
+var remove_song = "Remove Song";
