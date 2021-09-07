@@ -80,20 +80,20 @@ class ConnectFacebook extends StatelessWidget {
                     ),
                     SizedBox(height: 30,),
                     // SKIP
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => Permission(),
-                        ));
-                      },
-                      child:  setRegulerText(
-                        SKIP,
-                        14,
-                        Colors.white,
-                        FontWeight.w400,
-                        FontStyle.normal,
-                      ),
-                    )
+                    // GestureDetector(
+                    //   onTap: (){
+                    //     Navigator.push(context, MaterialPageRoute(
+                    //       builder: (context) => Permission(),
+                    //     ));
+                    //   },
+                    //   child:  setRegulerText(
+                    //     SKIP,
+                    //     14,
+                    //     Colors.white,
+                    //     FontWeight.w400,
+                    //     FontStyle.normal,
+                    //   ),
+                    // )
                   ],
                 ),
               ),
