@@ -4,6 +4,8 @@ import 'package:madhouse/Layouts/Next_White_Button.dart';
 import 'package:madhouse/Screens/ConnectFacebook.dart';
 import 'package:madhouse/Styles/my_colors.dart';
 import 'package:madhouse/Styles/my_strings.dart';
+import 'package:madhouse/Utilities/TextUtilities.dart';
+import 'package:madhouse/Utilities/TextfieldUtility.dart';
 import 'package:madhouse/Utils/toolbar.dart';
 
 
@@ -13,6 +15,9 @@ class FullName extends StatefulWidget {
 }
 
 class _FullNameState extends State<FullName> {
+
+  var nameTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,14 +36,13 @@ class _FullNameState extends State<FullName> {
                     children: [
                       SizedBox(height: 23,),
                       // Your mobile number ?
-                      Text(whats_your_name,
-                        style: TextStyle(
-                            color:  white,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: "CircularXXTTTrial",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 30.0
-                        ),),
+                      setBoldText(
+                        whats_your_name,
+                        30,
+                        Colors.white,
+                        FontWeight.w700,
+                        FontStyle.normal,
+                      ),
 
                       SizedBox(height: 6.7,),
 
@@ -54,38 +58,16 @@ class _FullNameState extends State<FullName> {
                           padding: const EdgeInsets.only(left: 12,right: 12,top: 6,bottom: 6),
                           child: Padding(
                             padding: const EdgeInsets.all(5),
-                            child: new TextField(
-                              style: const TextStyle(
-                                  color:  const Color(0xffffffff),
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: "SFProDisplay",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 16.0
-                              ),
-                              decoration: new InputDecoration(
-                                isDense: true,
-                                // contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 8),
-                                hintText: "Aakib Khilji",
-                                hintStyle: TextStyle(
-                                    color:  const Color(0xffffffff),
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: "SFProDisplay",
-                                    fontStyle:  FontStyle.normal,
-                                    fontSize: 16.0
-                                ),
-                                border: InputBorder.none,
-
-                                labelStyle: new TextStyle(
-                                    color:  const Color(0xffffffff),
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: "SFProDisplay",
-                                    fontStyle:  FontStyle.normal,
-                                    fontSize: 16.0),
-                                // hintStyle: TextStyle(
-                                //     fontSize: 18.0, color: Colors.black87,fontFamily: 'Poppins',fontWeight: FontWeight.w600
-                                // ),
-                              ),
-                              keyboardType: TextInputType.text,
+                            child:setTextField(
+                              nameTextController,
+                              "Aakib Khilji",
+                              false,
+                              TextInputType.text,
+                              false,
+                              "",
+                                  ()=>{
+                                // on Chnages
+                              },
 
                             ),
                           ),
@@ -94,17 +76,13 @@ class _FullNameState extends State<FullName> {
 
                       SizedBox(height: 8.7,),
                       // Use atlist 8 characters
-                      Text(
-                          this_appera,
-                          style: TextStyle(
-                              color:  white,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "CircularXXTTTrial",
-                              fontStyle:  FontStyle.normal,
-                              fontSize: 11.7
-                          ),
-                          textAlign: TextAlign.left
-                      )
+                      setRegulerText(
+                        this_appera,
+                        11.7,
+                        Colors.white,
+                        FontWeight.w400,
+                        FontStyle.normal,
+                      ),
                     ],
                   ),
                 ),

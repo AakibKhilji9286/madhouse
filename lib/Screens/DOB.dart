@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:madhouse/Layouts/Next_White_Button.dart';
 import 'package:madhouse/Screens/FullName.dart';
 import 'package:madhouse/Styles/my_colors.dart';
+import 'package:madhouse/Utilities/TextUtilities.dart';
 import 'package:madhouse/Utils/toolbar.dart';
 
 class DOB extends StatefulWidget {
@@ -47,15 +48,14 @@ class _DOBState extends State<DOB> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 23,),
-                      // Your mobile number ?
-                      Text('Whats your date of birth?',
-                        style: TextStyle(
-                            color:  const Color(0xffffffff),
-                            fontWeight: FontWeight.w700,
-                            fontFamily: "CircularXXTTTrial",
-                            fontStyle:  FontStyle.normal,
-                            fontSize: 30.0
-                        ),),
+                      // Whats your date of birth ?
+                      setBoldText(
+                        "Whats your date of birth?",
+                        30,
+                        Colors.white,
+                        FontWeight.w700,
+                        FontStyle.normal,
+                      ),
 
                       SizedBox(height: 6.7,),
 

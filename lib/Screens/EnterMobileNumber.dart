@@ -80,7 +80,7 @@ class _EnterMobileNumberState extends State<EnterMobileNumber> {
                                   width: 1,
                                   height: 27.333333333333332,
                                   decoration: BoxDecoration(
-                                      color: const Color(0x4d000000)
+                                      color:  Color(0x4d000000)
                                   )
                               ),
 

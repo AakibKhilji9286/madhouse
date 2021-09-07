@@ -17,6 +17,21 @@ Text setRegulerText(String text, double size, Color color, FontWeight weight,
   );
 }
 
+Text setRegulerTextAlign(String text, double size, Color color, FontWeight weight,
+    FontStyle fontStyle,TextAlign alignment) {
+  return Text(
+    text,
+    softWrap: true,
+    textAlign: alignment,
+    style: TextStyle(
+        fontSize: size,
+        fontFamily: regularFont,
+        fontWeight: weight,
+        color: color,
+        fontStyle: fontStyle),
+  );
+}
+
 Text setBoldText(String text, double size, Color color, FontWeight weight,
     FontStyle fontStyle) {
   return Text(

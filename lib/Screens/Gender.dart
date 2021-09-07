@@ -5,6 +5,7 @@ import 'package:madhouse/Layouts/Next_White_Button.dart';
 import 'package:madhouse/Screens/DOB.dart';
 import 'package:madhouse/Styles/my_colors.dart';
 import 'package:madhouse/Styles/my_strings.dart';
+import 'package:madhouse/Utilities/TextUtilities.dart';
 import 'package:madhouse/Utils/toolbar.dart';
 
 enum g { m, f, o }
@@ -39,28 +40,12 @@ class _GenderState extends State<Gender> {
                           height: 23,
                         ),
                         // Your mobile number ?
-                        Row(
-                          children: [
-                            Text(
-                              whats_your_gender,
-                              style: TextStyle(
-                                  color: white,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "CircularXXTTTrial",
-                                  fontStyle: FontStyle.normal,
-                                  fontSize: 30.0),
-                            ),
-
-                            Text(
-                              "?",
-                              style: TextStyle(
-                                  color: white,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "CircularXXTTTrial-Bold",
-                                  fontStyle: FontStyle.normal,
-                                  fontSize: 30.0),
-                            ),
-                          ],
+                        setBoldText(
+                          whats_your_gender,
+                          30,
+                          Colors.white,
+                          FontWeight.w700,
+                          FontStyle.normal,
                         ),
 
                         SizedBox(
@@ -86,15 +71,12 @@ class _GenderState extends State<Gender> {
                                     bottom: 15),
                                 child: SizedBox(
                                   width: double.infinity,
-                                  child: Text(
+                                  child:  setRegulerText(
                                     Female,
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: const Color(0xffffffff),
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: "CircularXXTTTrial",
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 16.0),
+                                    16,
+                                    Colors.white,
+                                    FontWeight.w400,
+                                    FontStyle.normal,
                                   ),
                                 ),
                               ),
@@ -119,15 +101,12 @@ class _GenderState extends State<Gender> {
                                     bottom: 15),
                                 child: SizedBox(
                                   width: double.infinity,
-                                  child: Text(
+                                  child: setRegulerText(
                                     Male,
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: const Color(0xffffffff),
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: "CircularXXTTTrial",
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 16.0),
+                                    16,
+                                    Colors.white,
+                                    FontWeight.w400,
+                                    FontStyle.normal,
                                   ),
                                 ),
                               ),
@@ -152,15 +131,12 @@ class _GenderState extends State<Gender> {
                                     bottom: 15),
                                 child: SizedBox(
                                   width: double.infinity,
-                                  child: Text(
+                                  child: setRegulerText(
                                     Other,
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: white,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: "CircularXXTTTrial",
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 16.0),
+                                    16,
+                                    Colors.white,
+                                    FontWeight.w400,
+                                    FontStyle.normal,
                                   ),
                                 ),
                               ),

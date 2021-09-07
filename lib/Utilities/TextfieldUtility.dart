@@ -98,3 +98,51 @@ setTextFieldPassword(
       )
   );
 }
+
+
+setTextFieldOTP(
+    TextEditingController controller,
+    String hintText,
+    bool secureEntry,
+    TextInputType inputType,
+    bool validtion,
+    String errorMSg,
+    Function onchange) {
+  return Theme(
+      data: new ThemeData(
+        primaryColor: Colors.green,
+        primaryColorDark: Colors.red,
+      ),
+      child: TextField(
+        style:  TextStyle(
+            color:  white,
+            fontWeight: FontWeight.w500,
+            fontFamily: regularFont,
+            fontStyle:  FontStyle.normal,
+            fontSize: 16.0
+        ),
+        decoration: new InputDecoration(
+          isDense: true,
+          counter: Offstage(),
+          // contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 8),
+          hintText: "X X X X",
+          hintStyle: TextStyle(
+              color:  white,
+              fontWeight: FontWeight.w500,
+              fontFamily: regularFont,
+              fontStyle:  FontStyle.normal,
+              fontSize: 16.0
+          ),
+          border: InputBorder.none,
+          labelStyle: new TextStyle(
+              color:  white,
+              fontWeight: FontWeight.w500,
+              fontFamily: regularFont,
+              fontStyle:  FontStyle.normal,
+              fontSize: 16.0),
+        ),
+        keyboardType: TextInputType.number,
+        maxLength: 4,
+      )
+  );
+}

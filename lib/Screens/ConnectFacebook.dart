@@ -6,6 +6,7 @@ import 'package:madhouse/Screens/Permission.dart';
 import 'package:madhouse/Styles/my_colors.dart';
 import 'package:madhouse/Styles/my_icons.dart';
 import 'package:madhouse/Styles/my_strings.dart';
+import 'package:madhouse/Utilities/TextUtilities.dart';
 import 'package:madhouse/Utils/toolbar.dart';
 
 
@@ -28,34 +29,23 @@ class ConnectFacebook extends StatelessWidget {
                       SvgPicture.asset(iconFacebook,width: 66.7,height: 66.7,),
                       SizedBox(height: 30,),
                       // Connect Facebook
-                      Text(
-                          connect_facebook,
-                          style: TextStyle(
-                              color:  white,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "CircularXXTTTrial",
-                              fontStyle:  FontStyle.normal,
-                              fontSize: 30.0
-                          ),
-                          textAlign: TextAlign.center
+                      setRegulerText(
+                        connect_facebook,
+                          30,
+                          Colors.white,
+                          FontWeight.w700,
+                          FontStyle.normal,
                       ),
 
                       // Find out your facebook friends on Mad House and Follow them.
-                      Text(
-                          find_out,
-                          style: TextStyle(
-                              color:  white,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "CircularXXTTTrial",
-                              fontStyle:  FontStyle.normal,
-                              fontSize: 14.0
-                          ),
-                          textAlign: TextAlign.center
+                      setRegulerTextAlign(
+                        find_out,
+                        14,
+                        Colors.white,
+                        FontWeight.w400,
+                        FontStyle.normal,
+                          TextAlign.center
                       ),
-
-
-
-
                     ],
                   ),
                 ),
@@ -68,13 +58,13 @@ class ConnectFacebook extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          child: Text(Connect,
-                              style:TextStyle(
-                                  color:   txt_color,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily: "CircularXXTTTrial",
-                                  fontStyle:  FontStyle.normal,
-                                  fontSize: 15.0)),
+                          child:  setRegulerText(
+                            Connect,
+                            15,
+                            txt_color,
+                            FontWeight.w700,
+                            FontStyle.normal,
+                          ),
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(
                               builder: (context) => FollowFriends(),
@@ -96,16 +86,12 @@ class ConnectFacebook extends StatelessWidget {
                           builder: (context) => Permission(),
                         ));
                       },
-                      child: Text(
-                          SKIP,
-                          style:  TextStyle(
-                              color:  white,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: "CircularXXTTTrial",
-                              fontStyle:  FontStyle.normal,
-                              fontSize: 14.0
-                          ),
-                          textAlign: TextAlign.right
+                      child:  setRegulerText(
+                        SKIP,
+                        14,
+                        Colors.white,
+                        FontWeight.w400,
+                        FontStyle.normal,
                       ),
                     )
                   ],
