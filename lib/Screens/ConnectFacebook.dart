@@ -78,7 +78,7 @@ class ConnectFacebook extends StatelessWidget {
                           )
                       ),
                     ),
-                 //   SizedBox(height: 30,),
+                    SizedBox(height: 30,),
                     // SKIP
                     GestureDetector(
                       onTap: (){
